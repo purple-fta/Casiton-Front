@@ -17,7 +17,7 @@ export function App() {
     useEffect(() => {
         console.log("axios post");
         axios.post(
-            'https://https://casiton-back-production.up.railway.app/api/auth/initData', // URL эндпоинта аутентификации
+            'https://casiton-back-production.up.railway.app/api/auth/initData', // URL эндпоинта аутентификации
             { "initData": window.Telegram.WebApp.initData } // Передаем данные для входа
         ).then(response => {
             const data = response.data;

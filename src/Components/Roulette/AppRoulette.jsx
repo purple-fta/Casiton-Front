@@ -6,7 +6,7 @@ import axios from 'axios';
 async function rollRequest(betAmount) {
     try {
         const response = await axios.get(
-            `https://https://casiton-back-production.up.railway.app/api/roll/${betAmount}`,
+            `https://casiton-back-production.up.railway.app/api/roll/${betAmount}`,
             { 
                 headers: {
                    Authorization: `Bearer ${localStorage.getItem('jwt')}`     
