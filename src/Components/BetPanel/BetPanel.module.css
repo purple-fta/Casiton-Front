@@ -1,0 +1,33 @@
+.betButton {
+    margin: 8px;
+    /* padding: 0.75rem 1.5rem; */
+    background-color: #1e1e2e;
+    color: #fff;
+    border: #cba6f7 4px solid;
+    border-radius: 8px;
+    /* border: none; */
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    flex: 1
+
+    /* Optional: Remove outline on click, but keep for accessibility */
+    /* outline: none; */
+}
+
+.betInput {
+    width: 100px;
+    font-size: 40px;
+}
+
+.betButton:hover,
+.betButton:focus {
+    background-color: #45475a;
+}
+
+.betText {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+}

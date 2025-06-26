@@ -1,0 +1,64 @@
+
+.spinnerContainer {
+    position: relative;
+    width: var(--width);
+    height: 100px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.itemsContainer {
+    display: flex;
+    transition: var(--items-transition, none);
+    transform: var(--items-transform, none);
+}
+
+    
+.item {
+    width: var(--width);
+    height: 100px;
+    flex: 0 0 var(--width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #444;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background: var(--color);
+    color: #11111b;
+    font-size: 30px;
+}
+
+.selectBorder {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: var(--left);
+    width: var(--width);
+    height: 100%;
+    border: 3px solid #fff;
+    border-radius: 8px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.button {
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 8px;
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    cursor: var(--cursor);
+}
+    
+
+.coloredSpan {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: var(--color);
+    border-radius: 6px;
+    border: 2px solid #333;
+    vertical-align: middle;
+}
