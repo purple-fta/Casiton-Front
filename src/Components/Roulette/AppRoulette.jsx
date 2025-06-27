@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import styles from "./AppRoulette.module.css";
 import axios from 'axios';
 
@@ -21,11 +21,17 @@ async function rollRequest(betAmount) {
     }
 }
 
+function getWidth() {
+    return Math.round(window.innerWidth / 6);
+  }
+
 export function AppRoulette(props) {
     console.log("AppRoulette");
 
-    // Ширина одного элемента (px)
-    const itemWidth = 80;
+    // Ширина одного элемента 
+    const itemWidthRef = useRef(getWidth());
+    const itemWidth = itemWidthRef.current;
+    console.log("itemWidth", itemWidth);
     
     // Количество элементов в рулетке
     const [items, setItems] = useState([]);
@@ -88,8 +94,8 @@ export function AppRoulette(props) {
 
     console.log("items", items);
     return (
-        <div style={{ width: 400, margin: "40px auto", textAlign: "center" }}>
-            <div className={styles.spinnerContainer} style={{"--width": itemWidth * 5 + "px"}}>
+        <div style={{ margin: "40px " + itemWidth/2 + "px", textAlign: "center" }}>
+            <div className={styles.spinnerContainer} style={{"--width": itemWidth * 5 + "px", "--height": itemWidth * 1.3 + "px"}}>
                 {/* Контейнер с элементами рулетки/*} */}
                 <div className={styles.itemsContainer} style={{
                         "--items-transition": isSpinning
@@ -99,7 +105,7 @@ export function AppRoulette(props) {
                     }}>
                     {items.map((item, idx) => (
                         <div key={idx} className={styles.item} style={{
-                            "--color": item[0], "--width": itemWidth + "px"
+                            "--color": item[0], "--width": itemWidth + "px", "--height": itemWidth * 1.3 + "px"
                         }}>{item[1]}</div>
                     ))}
                 </div>

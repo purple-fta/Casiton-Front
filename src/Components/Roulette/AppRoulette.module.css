@@ -2,7 +2,8 @@
 .spinnerContainer {
     position: relative;
     width: var(--width);
-    height: 100px;
+    height: var(--height);
+    /* height: 100px; */
     overflow: hidden;
     border-radius: 8px;
 }
@@ -15,7 +16,7 @@
     
 .item {
     width: var(--width);
-    height: 100px;
+    height: var(--height);
     flex: 0 0 var(--width);
     display: flex;
     align-items: center;
@@ -25,7 +26,7 @@
     box-sizing: border-box;
     background: var(--color);
     color: #11111b;
-    font-size: 30px;
+    font-size: 3.1rem;
 }
 
 .selectBorder {
@@ -42,12 +43,12 @@
 }
 
 .button {
-    margin-top: 20px;
-    padding: 10px 30px;
-    font-size: 20px;
-    border-radius: 8px;
-    background: #ff9800;
-    color: #fff;
+    margin-top: 50px;
+    padding: 20px 35px;
+    font-size: 2.5rem;
+    border-radius: 20px;
+    background: #a6e3a1;
+    color: #1e1e2e;
     border: none;
     cursor: var(--cursor);
 }
