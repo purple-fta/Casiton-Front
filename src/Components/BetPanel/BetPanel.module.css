@@ -1,12 +1,12 @@
 .betButton {
-    margin: 8px;
+    /* margin: 8px; */
     padding: 1.5rem auto;
     background-color: #1e1e2e;
     color: #fff;
-    border: #cba6f7 4px solid;
+    border: #cba6f7 2px solid;
     border-radius: 8px;
     /* border: none; */
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s;

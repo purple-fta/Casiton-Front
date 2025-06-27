@@ -1,4 +1,13 @@
-body {
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    font-family: system-ui, sans-serif;
     background-color: #1e1e2e;
     color: #cdd6f4;
 }
